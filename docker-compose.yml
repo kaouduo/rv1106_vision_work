@@ -1,0 +1,14 @@
+services:
+  rk1106-dev:
+    build: .
+    container_name: lockzhiner_dev
+    volumes:
+      # 自动挂载当前目录到容器的 /workspace
+      - .:/workspace
+    tty: true
+    stdin_open: true
+    privileged: true # 赋予容器更高权限，方便后续可能的 USB 烧录
+
+# 运行后面的命令构建开发环境 docker compose build
+# 构建好后进入容器 docker compose up -d
+# docker exec -it lockzhiner_dev bash
