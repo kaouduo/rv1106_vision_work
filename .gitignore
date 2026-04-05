@@ -1,0 +1,21 @@
+# Git ignore for RV1106 Vision Work
+
+# Build directories
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/a.out
+**/*.o
+**/*.d
+
+# Third party libraries (downloaded by script)
+third_party/
+
+# Docker artifacts
+.dockerignore
+
+# OS specific files
+.DS_Store
+Thumbs.db

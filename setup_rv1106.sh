@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # 确保在 third_party 目录下操作
 mkdir -p third_party
 cd third_party
@@ -33,5 +34,6 @@ for path in "${FILES[@]}"; do
 done
 
 echo "--- 全部搞定！你的 third_party 文件夹已就绪 ---"
-# chmod +x download_libs.sh
-# ./download_libs.sh
+echo "接下来你可以运行以下命令启动开发环境："
+echo "docker compose up -d"
+echo "docker exec -it rv1106_dev bash"
