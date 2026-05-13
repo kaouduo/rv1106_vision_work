@@ -42,8 +42,8 @@ RUN echo "rv1106 ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 # 6. 设置工作目录
 WORKDIR /home/rv1106/workspace
 
-# 7. 预下载交叉编译工具链 (放 /opt 目录下)
-RUN git clone https://gitee.com/LockzhinerAI/arm-rockchip830-linux-uclibcgnueabihf.git /opt/toolchain && \
+# 7. 预留交叉编译工具链目录 (由宿主机挂载或容器内手动下载)
+RUN mkdir -p /opt/toolchain && \
     chown -R rv1106:rv1106 /opt/toolchain
 
 # 8. 配置环境变量

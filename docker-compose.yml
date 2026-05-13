@@ -5,6 +5,7 @@ services:
     volumes:
       # 自动挂载当前目录到容器的 /home/rv1106/workspace
       - .:/home/rv1106/workspace
+      - ./toolchain:/opt/toolchain
     tty: true
     stdin_open: true
     privileged: true # 赋予容器更高权限，方便后续可能的设备通信
