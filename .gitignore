@@ -19,3 +19,4 @@ third_party/
 # OS specific files
 .DS_Store
 Thumbs.db
+toolchain/
